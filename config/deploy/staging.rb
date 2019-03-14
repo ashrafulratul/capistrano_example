@@ -61,7 +61,7 @@
 #   }
 
 
-set :branch, 'capistrano'
+set :branch, 'master'
 
 server "123.200.15.100",
   user: "reivo",
@@ -82,7 +82,7 @@ namespace :deploy do
        	  execute "pwd"
           execute "/usr/local/bin/composer update -d=#{release_path}"
         	# execute "#{fetch(:migrate_path)} migrate"
-          execute 'php', 'artisan', 'migrate'
+          # execute 'php', 'artisan', 'migrate'
 		end
       end
     end

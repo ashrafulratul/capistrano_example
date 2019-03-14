@@ -45,5 +45,5 @@ set :pty, true
 set :deploy_to, "/Users/reivo/Sites/dev/cleanlife-capdeploy"
 set :app_path, '/Users/reivo/Sites/dev/cleanlife-capdeploy/current'
 set :keep_releases, 3
-append :linked_files, ".env"
-append :linked_dirs,"vendor"
+# append :linked_files, ".env"
+# append :linked_dirs,"vendor"
