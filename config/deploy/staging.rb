@@ -70,8 +70,8 @@ server "123.200.15.100",
     #user: "user_name", # overrides user setting above
     keys: %w(~/.ssh/id_rsa),
     forward_agent: false,
-    auth_methods: %w(publickey password)
-    # password: "please use keys"
+    auth_methods: %w(publickey password),
+    password: "reivot"
   }
 
 namespace :deploy do
@@ -80,7 +80,7 @@ namespace :deploy do
       on roles(:web) do
         within release_path do
        	  execute "pwd"
-          execute "/usr/local/bin/composer update -d=#{release_path}"
+          # execute "/usr/local/bin/composer update -d=#{release_path}"
         	# execute "#{fetch(:migrate_path)} migrate"
           # execute 'php', 'artisan', 'migrate'
 		end
