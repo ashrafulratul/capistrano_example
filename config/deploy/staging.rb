@@ -70,8 +70,8 @@ server "123.200.15.100",
     #user: "user_name", # overrides user setting above
     keys: %w(~/.ssh/id_rsa),
     forward_agent: false,
-    auth_methods: %w(publickey password),
-    password: "reivot"
+    auth_methods: %w(publickey password)
+    # password: ""
   }
 
 namespace :deploy do
